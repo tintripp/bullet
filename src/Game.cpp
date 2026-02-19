@@ -20,6 +20,8 @@ Game::~Game(){
 
 void Game::loop(){
     while (!WindowShouldClose()){
+        if (state->ready())
+            setState(std::move(state->next));
         update();
         render();
     }
