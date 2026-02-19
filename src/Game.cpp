@@ -1,17 +1,20 @@
+#include <ctime>
 #include "Game.h"
 #include "raylib.h"
-#include "states/PlayState.h"
+#include "states/MainMenuState.h"
 Game::Game(){
     const int screenWidth = 800;
     const int screenHeight = 450;
     SetConfigFlags(FLAG_WINDOW_TOPMOST); 
+
+    SetRandomSeed((unsigned int)time(NULL));
 
     InitWindow(screenWidth, screenHeight, "ONE bullet");
 
     SetTargetFPS(60);
 
     // set init state
-    setState(std::make_unique<PlayState>());
+    setState(std::make_unique<MainMenuState>());
 }
 
 Game::~Game(){
