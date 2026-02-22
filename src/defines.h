@@ -1,2 +1,9 @@
 #pragma once
+
 #define GAME_MAXPLAYERS 4
+#define GAME_TARGET_WIDTH 320
+#define GAME_TARGET_HEIGHT 224
+#define GAME_TARGET_INITSCALE 3
+#define GAME_TITLE "ONE bullet"
+
+#define TILE_SIZE 16

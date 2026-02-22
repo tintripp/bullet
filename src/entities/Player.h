@@ -1,8 +1,7 @@
 #pragma once
-#include "traits/Updatable.h"
-#include "traits/Renderable.h"
+#include "Entity.h"
 #include "raylib.h"
-class Player : public Updatable, public Renderable {
+class Player : public Entity {
 public:
     float x,y;
     int w,h;

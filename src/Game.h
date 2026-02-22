@@ -4,9 +4,10 @@
 #include "traits/Updatable.h"
 #include "traits/Renderable.h"
 #include "states/State.h"
+#include "raylib.h"
 class Game : public Updatable, public Renderable {
 public:
-    // why unique_ptr? i OWN this state! im responsible for freeing its memory!
+    RenderTexture buffer; 
     std::unique_ptr<GameState> state;
 
     Game();
