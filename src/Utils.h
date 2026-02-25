@@ -2,6 +2,7 @@
 #include "raylib.h"
 #include "defines.h"
 #include <algorithm>
+#include <cmath>
 namespace Utils {
     inline int getBufferMult() {
         int xmult = GetScreenWidth() / GAME_TARGET_WIDTH;
@@ -14,8 +15,9 @@ namespace Utils {
 
         float w = GAME_TARGET_WIDTH * mult;
         float h = GAME_TARGET_HEIGHT * mult;
-        float x = (GetScreenWidth() - w) / 2.f;
-        float y = (GetScreenHeight() - h) / 2.f;
+        float x = std::floor((GetScreenWidth() - w) / 2.f);
+        float y = std::floor((GetScreenHeight() - h) / 2.f);
+
 
         return Rectangle{x, y, w, h};
     }

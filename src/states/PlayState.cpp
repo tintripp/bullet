@@ -1,6 +1,7 @@
 #include "PlayState.h"
 #include "MainMenuState.h"
 #include "raylib.h"
+#include "../Utils.h"
 #include <memory>
 #include <stdio.h>
 
@@ -32,8 +33,10 @@ void PlayState::update(){
         }else{
             if (IsGamepadAvailable(i)) {
                 // create one
+                Vector2 mp = Utils::bufferMousePosition();
+                
                 plrs[i] = std::make_unique<Player>(
-                    GetMouseX(), GetMouseY(), 
+                    mp.x, mp.y, 
                     Color{
                         (unsigned char)GetRandomValue(0,255),
                         (unsigned char)GetRandomValue(0,255),

@@ -11,7 +11,7 @@ void MainMenuState::update(){
 }
 void MainMenuState::render(){
     ClearBackground(BLUE);
-    DrawText("Main menu \nK: enter LEVELEDITORSTATE", 0, 0, 40, WHITE);
+    DrawText("Main menu \nK: enter LEVELEDITORSTATE", 0, 0, 20, WHITE);
 }
 void MainMenuState::enter(){}
 void MainMenuState::exit(){}

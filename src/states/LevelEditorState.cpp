@@ -19,6 +19,7 @@ void LevelEditorState::update(){
 }
 void LevelEditorState::render(){
     ClearBackground(BLACK);
+    DrawText("LEVEL EDITOR", 0, 0, 20, RED);
 
     Vector2 mp = Utils::bufferMousePosition();
     DrawRectangle(
@@ -26,10 +27,8 @@ void LevelEditorState::render(){
         (int)(mp.y / TILE_SIZE) * TILE_SIZE, 
         TILE_SIZE, 
         TILE_SIZE, 
-        GRAY
+        Color{255,255,255,64}
     );
-
-    DrawText("LEVEL EDITOR", 0, 0, 20, WHITE);
 }
 void LevelEditorState::enter(){
     w = 64;
