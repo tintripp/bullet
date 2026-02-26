@@ -1,7 +1,20 @@
 #pragma once 
+#include <map>
+#include <string>
+
 enum TileType{
     TILETYPE_AIR = 0,
-    TILETYPE_GROUND
+    TILETYPE_GROUND,
+    TILETYPE_LAVA,
+
+
+    //always last
+    TILETYPECOUNT
+};
+const std::map<int, std::string> TILETYPENAMES = {
+    {TileType::TILETYPE_AIR, "Air"},
+    {TileType::TILETYPE_GROUND, "Ground"},
+    {TileType::TILETYPE_LAVA, "Lava"}
 };
 
 class Level{

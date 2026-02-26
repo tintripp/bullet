@@ -7,7 +7,7 @@
 
 // Players will prob connect here. (i.e. gamepads)
 void PlayState::update(){
-    if(IsKeyPressed(KEY_J))
+    if(IsKeyPressed(KEY_ESCAPE))
         transition(std::make_unique<MainMenuState>());
     
     /*if(IsKeyPressed(KEY_UP)){
@@ -50,8 +50,7 @@ void PlayState::update(){
     }
 }
 void PlayState::render(){
-    DrawText("PlayState\n\n\n\
-        Connect a controller to spawn a player", 
+    DrawText("PlayState\n\n\nConnect a controller to\nspawn.", 
         0, 0, 20, RED);
     ClearBackground(YELLOW);
     
